@@ -1,49 +1,49 @@
 Twitter Scraping with MongoDB and Streamlit
 
-This is a web-based Twitter scraping tool built with Python, using the Streamlit framework for the user interface, 
-the Snscrape package for accessing Twitter data, and the MongoDB database to store the extracted tweets. The app allows users to search
-for tweets containing a specific hashtag or keyword within a given time frame, and view, download.
+Basic workflow and execution of project Twitter Scraping 
 
-Installation
+import all required packages and lib such as 
 
-To use this app, you need to have Python 3.x installed on your system, as well as the following Python packages: 
-• streamlit 
-• snscrape 
-• pandas 
-• pymongo 
-• st_lottie
+streamlit , pandas , json , pymongo , snscrape.modules.twitter , datatime , time , image and st_lottie
+
+mongoDB client connection by pymongo.MongoClient
+
+animation of hello by loading of json file & using st_lottie package 
+
+snow falling animation by loading css file by using class as local_css 
+
+main block 
+
+giving the header name by st.markdown and editing the color , size and text 
+
+adding menu as Twitter Scraping , About and Version 
+
+selection of menu 
+
+when main menu is selected then it display with 3 sub tab as Search , Display , Download 
+
+as per selection of sub menu 
+
+in Search allows user to enter the form deteails by hashtag or keyword , time frame and no of tweets click on submit button to fetch the data 
+this will fetch the data only less than 1000 tweets 
+
+A loading bar will appare once it finishes 
+
+It will show how many data as been fetehed 
+
+in display sub menu it display all the feteched data as a dataframe by this we can able to sort in A-Z or Z-A formats 
+
+In download tab it will allow user to download in csv or json format 
 
 
-You can install them using pip, like this: pip install streamlit snscrape pandas pymongo 
-st_lottie 
 
-you also need to have access to a MongoDB database, and provide the connection string and database name in the program.
 
-Usage
 
-To run the app, open a terminal, navigate to the directory where the program is located, and enter the following command: streamlit run project1_twitterscraping_guvi.py
 
-This will start the app in your web browser, and you can interact with it using the menus and sub menus 
-Features
 
-The app has three menus that allow you to perform different tasks:
-1. Twitter Scraping: 
-2. About 
-3. Version
 
-Twitter Scraping
-In this page where you can search for tweet contenting a specific word or hashtag within time frame you can also choose how many tweets to display on screens 
 
-About 
-This page gives the information about features used in this website and its descriptions
 
-Version 
-this page gives the information about the project title ,project done by , version 
-
-Add on
-Amimation using st_lottie package by json gif 
-Snow fall effect by using css file 
-Page layout color changes done by toml file  
 
 Demo video link1:  https://drive.google.com/file/d/1cBIDjZSL8cnfRjFCSBFZEAx79JYFUgKS/view?usp=sharing
 
