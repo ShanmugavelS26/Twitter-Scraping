@@ -1,6 +1,7 @@
 # all needed packages and lib
 import streamlit as st
 import pandas as pd
+import numpy as np
 import json
 from streamlit_lottie import st_lottie
 import time
@@ -13,7 +14,7 @@ from PIL import Image
 # MongoDB client connection is done
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 tweetdb = client.shanmu
-tweetdb_main = tweetdb.twitterscr.py
+tweetdb_main = tweetdb.project1_twitterscraping.py
 
 # animation hello
 def load_lottiefile(filepath: str):
@@ -190,7 +191,18 @@ def main():
                         mime='text/csv',
                         )
           st.success("Successfully Downloaded data as CSV")
-
+          # loading progress for downloading
+          'Downloading the data of CSV....'
+          # Add a placeholder
+          latest_iteration = st.empty()
+          bar = st.progress(0)
+          for i in range(100):
+          # Update the progress bar with each iteration.
+              latest_iteration.text(f'Downloading the data of CSV {i+1}')
+              bar.progress(i + 1)
+              time.sleep(0.01)
+          '...CSV Data donwloaded successfully!!!'
+          
       # Download the scraped data as JSON
       with col2:
          st.write("Download the tweet data as JSON File")
@@ -204,9 +216,20 @@ def main():
                         data=js,
                         file_name='twtjs.js',
                         mime='text/js',
+                        
                         )
          st.success("Successfully Downloaded data as JSON")
-
+         # loading progress for downloading
+         'Downloading the data of JSON ....'
+         # Add a placeholder
+         latest_iteration = st.empty()
+         bar = st.progress(0)
+         for i in range(100):
+             # Update the progress bar with each iteration.
+             latest_iteration.text(f'Downloading the data of JSON {i+1}')
+             bar.progress(i + 1)
+             time.sleep(0.01)
+         '...JSON Data donwloaded successfully!!!'  
   elif choice=="About":
     st.markdown(
         f"""    
@@ -251,9 +274,24 @@ def main():
         unsafe_allow_html=True) 
     # Info about Version
     with st.expander("Version"):
-      st.write('''Streamlit Project Version - 1.0.0                                                                                         
-                 Project Tittle - Twitter Scrapping                                                                                                 
-                 Project By - Shanmugavel S 
+      st.write('''
+                Project Tittle - Twitter Scrapping   
+
+                Project By - Shanmugavel S  
+
+                Streamlit  Version  - V1.20.0      
+
+                Streamlit Project Version - 1.0.0 completion of project                                                           
+
+                Streamlit Project Version - 1.0.1 adding of animation
+
+                Streamlit Project Version - 1.0.2 adding of snowfall 
+
+                Streamlit Project Version - 1.0.3 adding progress bar for fetching the data and downloading the data  
+
+                Streamlit Project Version - 1.0.4 adding of video
+
+                Streamlit Project Version - 1.0.5 moving animation to right side of screen
                 ''')    
 # call the function
 main()
