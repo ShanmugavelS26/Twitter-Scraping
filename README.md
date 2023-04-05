@@ -45,6 +45,5 @@ Amimation using st_lottie package by json gif
 Snow fall effect by using css file 
 Page layout color changes done by toml file  
 
-Demo video link1:  https://drive.google.com/file/d/1cBIDjZSL8cnfRjFCSBFZEAx79JYFUgKS/view?usp=sharing
+Demo video link:  https://drive.google.com/file/d/1vhtkpj8yz9tfPJaBeOtSnvOWU0s3UTbd/view?usp=sharing
 
-Demo video link 2: https://drive.google.com/file/d/1o500mRYG_t_S-91GMOCk2SooOQ6YFhuT/view?usp=sharing
