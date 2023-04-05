@@ -21,16 +21,6 @@ def load_lottiefile(filepath: str):
     with open(filepath,"r") as f:
         return json.load(f)
 lottie_coding = load_lottiefile("welcome.json")
-st_lottie(
-   lottie_coding,
-   speed=5,
-   reverse=False,
-   loop=True,
-   quality="high",
-   height = None,
-   width = None,
-   key = None,  
-)
 
 # animation snow fall
 # class for css file
@@ -94,10 +84,23 @@ def main():
 
   # Menu 1 is Main Menu page 
   if choice=="Twitter Scraping":
-
+    right_col , left_col = st.columns(2)
+    # animation hello  
+    with left_col:
+     st_lottie(
+     lottie_coding,
+     speed=5,
+     reverse=False,
+     loop=True,
+     quality="high",
+     height = 350,
+     width = 550,
+     key = "coding",
+     )
+    with right_col:
    # tab sub menu
-    tab1, tab2, tab3 = st.tabs(["Search", "Display", "Download"]) # total 3 sub menus
-    with tab1:  
+     tab1, tab2, tab3 = st.tabs(["Search", "Display", "Download"]) # total 3 sub menus
+     with tab1:  
       # to change the color and size of sub menus
       st.markdown(
          f"""    
@@ -229,8 +232,18 @@ def main():
              latest_iteration.text(f'Downloading the data of JSON {i+1}')
              bar.progress(i + 1)
              time.sleep(0.01)
-         '...JSON Data donwloaded successfully!!!'  
+         '...JSON Data donwloaded successfully!!!'
   elif choice=="About":
+    st_lottie(
+     lottie_coding,
+     speed=5,
+     reverse=False,
+     loop=True,
+     quality="high",
+     height = 350,
+     width = 550,
+     key = "coding",
+     )
     st.markdown(
         f"""    
         <h3 style='color: #F63366; font-size: 18px;'>About</h3>    
@@ -267,6 +280,16 @@ def main():
         img = open(r'C:\Users\shanm\Videos\Captures\Project1_twitterscraping.mp4','rb')
         st.video(img,format='video/mp4')
   elif choice=="Version": 
+    st_lottie(
+     lottie_coding,
+     speed=5,
+     reverse=False,
+     loop=True,
+     quality="high",
+     height = 350,
+     width = 550,
+     key = "coding",
+     )
     st.markdown(
         f"""    
         <h3 style='color: #F63366; font-size: 18px;'>Version</h3>    
@@ -292,6 +315,6 @@ def main():
                 Streamlit Project Version - 1.0.4 adding of video
 
                 Streamlit Project Version - 1.0.5 moving animation to right side of screen
-                ''')    
+                ''')         
 # call the function
 main()
