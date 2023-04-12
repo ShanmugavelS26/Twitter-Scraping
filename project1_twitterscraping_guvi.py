@@ -82,11 +82,11 @@ def main():
   menu = ["Twitter Scraping","About","Version"]
   choice = st.sidebar.selectbox("Menu",menu)
 
-  # Menu 1 is Main Menu page 
+  # Menu 1 is Twitter scraping page 
   if choice=="Twitter Scraping":
-    right_col , left_col = st.columns(2)
+    left_col , right_col = st.columns(2)
     # animation hello  
-    with left_col:
+    with right_col:
      st_lottie(
      lottie_coding,
      speed=5,
@@ -97,7 +97,7 @@ def main():
      width = 550,
      key = "coding",
      )
-    with right_col:
+    with left_col:
    # tab sub menu
      tab1, tab2, tab3 = st.tabs(["Search", "Display", "Download"]) # total 3 sub menus
      with tab1:  
@@ -175,6 +175,11 @@ def main():
        #Dispaly the document 
        st.dataframe(df)   
     with tab3:
+      st.markdown(
+         f"""    
+         <h3 style='color: #EB4034; font-size: 48px;'>Download</h3>    
+         """,
+         unsafe_allow_html=True)
       col1, col2 = st.columns(2)
       # Download the scraped data as CSV
       with col1:
