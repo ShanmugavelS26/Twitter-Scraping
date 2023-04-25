@@ -1,0 +1,22 @@
+stream lit commands 
+
+create form 
+add button 
+custom size , color of the text 
+add loading progress bar 
+add img gif 
+add animation by css
+change the background color by config.toml file 
+
+Issue Faced 
+ 
+After finishing project on 5th apr and submited then run and checked many time after that on 25 apr its stopped working 3-4 days back also run and checked it was working ok 
+
+data not feching its showing multiple error as lib , and extra line error with is not present 1662 , 762 line no
+
+tried by uninstalling the packages streamlit , snscrape and updated the lib also but same issue need to get mentor support 
+
+checked in internet it showing as it has stopped working after days for most of the 3rd party app and solve given as update the snscrape lib but not working 
+
+
+
